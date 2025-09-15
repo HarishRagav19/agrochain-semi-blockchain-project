@@ -1,0 +1,15 @@
+
+
+cd truffle
+truffle compile
+truffle migrate --network development
+
+
+cd ../backend
+npm install
+node server.js
+
+
+cd ../frontend
+python -m http.server 8080
+# open http://localhost:8080
