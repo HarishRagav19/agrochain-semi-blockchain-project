@@ -1,0 +1,9 @@
+[
+  {
+    "index": 0,
+    "timestamp": "2025-09-13T00:00:00Z",
+    "data": "GENESIS",
+    "prevHash": "0",
+    "hash": "genesis-placeholder-hash"
+  }
+]

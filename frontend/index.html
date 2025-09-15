@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AgroManage — Bright Farm Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="top">
+      <h1>AgroManage 🌾</h1>
+      <p class="tag">Semi-blockchain agriculture ledger — colorful, centered & responsive</p>
+      <div class="wallet-row">
+        <button id="btnConnect">Connect MetaMask</button>
+        <div id="account" class="account">Not connected</div>
+      </div>
+    </header>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Add Farm</h2>
+        <input id="farmOwner" placeholder="Owner name" />
+        <input id="farmName" placeholder="Farm name" />
+        <input id="farmLocation" placeholder="Location" />
+        <button id="btnAddFarm">Add Farm (on-chain)</button>
+      </div>
+
+      <div class="card">
+        <h2>Add Crop</h2>
+        <input id="farmId" placeholder="Farm ID (numeric)" />
+        <input id="cropType" placeholder="Crop type (e.g., Wheat)" />
+        <input id="cropQty" placeholder="Quantity (kg)" />
+        <button id="btnAddCrop">Add Crop (on-chain)</button>
+      </div>
+
+      <div class="card">
+        <h2>Record Transaction</h2>
+        <input id="txAction" placeholder='e.g., "Sold 20kg wheat to BuyerX"' />
+        <button id="btnRecordTx">Record Transaction</button>
+      </div>
+
+      <div class="card">
+        <h2>Ledger & History</h2>
+        <div class="controls">
+          <button id="btnFetchLedger">Fetch Ledger</button>
+          <button id="btnClearDisplay">Clear</button>
+        </div>
+        <div id="ledgerOutput" class="ledger"></div>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <small>After deploying the contract, paste the address in <code>frontend/js/app.js</code></small>
+    </footer>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
